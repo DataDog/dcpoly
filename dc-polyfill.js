@@ -34,5 +34,9 @@ if (!checks.hasTracingChannelHasSubscribers()) {
   dc = require('./patch-tracing-channel-has-subscribers.js')(dc);
 }
 
+if (!checks.hasSubscribersMutationBug()) {
+  dc = require('./patch-subscribers-mutation-bug.js')(dc);
+}
+
 module.exports = dc;
 

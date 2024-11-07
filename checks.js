@@ -62,5 +62,11 @@ module.exports.hasSyncUnsubscribeBug = hasSyncUnsubscribeBug;
 function hasTracingChannelHasSubscribers() {
   return MAJOR >= 22
     || (MAJOR == 20 && MINOR >= 13);
-};
+}
 module.exports.hasTracingChannelHasSubscribers = hasTracingChannelHasSubscribers;
+
+function hasSubscribersMutationBug() {
+  // TODO: version TBD
+  return MAJOR <= 22 && MINOR <= 9;
+}
+module.exports.hasSubscribersMutationBug = hasSubscribersMutationBug;

@@ -97,8 +97,9 @@ jobs:
           - 20.13.0 # introduces TC early exit and TC#hasSubscribers()
           - 21.0.0 # nothing special, first 21
           - 21.x # nothing special, latest 21
-          - 22.0.0 # introduces TC early exit and TC#hasSubscribers()
+          - 2.20.0 # introduces TC early exit and TC#hasSubscribers()
           - 22.x # nothing special, full support DC
+          - add me
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1

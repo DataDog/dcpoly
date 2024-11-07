@@ -17,6 +17,9 @@ const ReflectApply = Reflect.apply;
 const PromiseReject = Promise.reject.bind(Promise);
 const PromiseResolve = Promise.resolve;
 const PromisePrototypeThen = makeCall(Promise.prototype.then);
+const ArrayPrototypePush = makeCall(Array.prototype.push);
+const ArrayPrototypePushApply = (...args) => Array.prototype.push.apply(...args);
+const ArrayPrototypeSlice = makeCall(Array.prototype.slice);
 const ArrayPrototypeSplice = makeCall(Array.prototype.splice);
 const ArrayPrototypeAt = makeCall(Array.prototype.at || arrayAtPolyfill);
 const ObjectDefineProperty = Object.defineProperty;
@@ -31,6 +34,9 @@ module.exports = {
   PromiseReject,
   PromiseResolve,
   PromisePrototypeThen,
+  ArrayPrototypePush,
+  ArrayPrototypePushApply,
+  ArrayPrototypeSlice,
   ArrayPrototypeSplice,
   ArrayPrototypeAt,
   ObjectDefineProperty,
